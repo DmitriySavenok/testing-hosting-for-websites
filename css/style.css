@@ -12796,7 +12796,7 @@ body {
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1315px) {
   .header__contacts a {
     width: 174px;
     margin-right: 0;
@@ -12832,6 +12832,12 @@ body {
 
   .modal-fullscreen-xl-down .modal-footer {
     border-radius: 0;
+  }
+}
+
+@media (max-width: 1140px) {
+  .header-desktop {
+    grid-template-columns: 280px auto 244px;
   }
 }
 
