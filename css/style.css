@@ -395,7 +395,7 @@ template {
 .header-desktop {
   height: 90px;
   display: grid;
-  grid-template-columns: 340px auto 260px;
+  grid-template-columns: 340px auto 270px;
   grid-template-rows: 50% 50%;
   background-color: white;
   -webkit-filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.12));
@@ -442,6 +442,7 @@ template {
 }
 
 .header__contacts a {
+  height: 19px;
   margin-right: 56px;
   text-decoration: none;
   color: white;
@@ -458,9 +459,13 @@ template {
   margin-right: 8px;
 }
 
-.phone-icon,
-.mail-icon {
+.phone-icon {
   height: 12px;
+}
+
+.mail-icon {
+  height: 14px !important;
+  vertical-align: middle;
 }
 
 .english-vers-btn {
@@ -647,6 +652,10 @@ template {
 
 .header-mobile-btn {
   background-color: #539DA6;
+  border: none;
+}
+
+.header-mobile-btn:active {
   border: none;
 }
 
