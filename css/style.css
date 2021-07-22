@@ -740,10 +740,6 @@ header {
 
 /* Adaptation */
 
-.carousel-screen__slider-item {
-  height: 350px;
-}
-
 /* Слайдер */
 
 /* Слайдер запущен */
@@ -786,7 +782,7 @@ header {
 
 .carousel-screen .slick-dots {
   position: relative;
-  top: -55px;
+  top: -50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -800,7 +796,7 @@ header {
 
 .carousel-screen .slick-dots li {
   list-style: none;
-  margin: 0px 10px;
+  margin: 0px 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -814,13 +810,28 @@ header {
 /* Элемент точки */
 
 .carousel-screen .slick-dots li button {
-  border: none;
-  background-color: #539DA6;
-  opacity: 30%;
-  border: none;
-  cursor: pointer;
   font-size: 0;
-  padding: 1px 20px;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: #539DA6;
+  border: none;
+  outline: 0;
+  background: transparent;
+  opacity: 30%;
+}
+
+.carousel-screen .slick-dots li button::before {
+  font-size: 30px;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
+  content: "—";
+  text-align: center;
+  color: #539DA6;
 }
 
 .carousel-screen .slick-dots li.slick-active button {
@@ -834,16 +845,46 @@ header {
 
 /* Common styles */
 
+.carousel-screen__slider-item {
+  height: 350px;
+}
+
+.slide-content {
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .carousel-screen h2 {
   color: #539DA6;
   font-size: 2.3em;
   font-weight: normal;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
 .carousel-screen p {
   color: #656565;
   font-size: 1.2em;
-  margin: 3em 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.carousel-screen .usual-button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-bottom: 3em;
 }
 
 /* SMS-slide */
@@ -852,7 +893,6 @@ header {
   background-image: url(../img/sms-slide-background.png); }
 
 .sms-slide {
-  padding-top: 1em;
   background-position: 90% 50%;
   background-size: 300px;
   background-repeat: no-repeat;
@@ -874,11 +914,10 @@ header {
   color: #656565;
   font-size: 1.2em;
   padding-left: 1em;
-  margin-bottom: 2.5em;
 }
 
 .qr-code-info li {
-  margin-bottom: 6px;
+  margin: 6px 0;
 }
 
 .qr-code {
@@ -900,13 +939,15 @@ header {
 /* Volunteer-slide */
 
 .no-webp .volunteer-slide{
-  background-image: url(../img/portrait-of-young-blonde-woman-in-white-t-shirt.png); }
+  background-image: url(../img/volunteer-slide-background.png); }
 
 .volunteer-slide {
-  background-position: 100% 1.5em;
-  background-size: 550px;
+  background-position: 93% 1em;
+  background-size: 350px;
   background-repeat: no-repeat;
 }
+
+/* Adaptation */
 
 .slogan {
   color: #656565;
@@ -1000,7 +1041,8 @@ body {
 
 p,
 a,
-h2 {
+h2,
+ol {
   -webkit-touch-callout: none;
   /* iOS Safari */
   -webkit-user-select: none;
@@ -1095,4 +1137,4 @@ h2 {
 
 .webp .sms-slide{ background-image: url(../img/sms-slide-background.webp); }
 
-.webp .volunteer-slide{ background-image: url(../img/portrait-of-young-blonde-woman-in-white-t-shirt.webp); }
+.webp .volunteer-slide{ background-image: url(../img/volunteer-slide-background.webp); }
