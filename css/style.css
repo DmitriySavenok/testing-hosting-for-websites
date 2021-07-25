@@ -821,6 +821,7 @@ header {
   border: none;
   outline: 0;
   background: none;
+  color: #539DA6;
   opacity: 30%;
 }
 
@@ -831,7 +832,6 @@ header {
   height: 20px;
   content: "—";
   text-align: center;
-  color: #539DA6;
 }
 
 .carousel-screen .slick-dots li.slick-active button {
