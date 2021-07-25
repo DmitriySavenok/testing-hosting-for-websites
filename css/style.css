@@ -821,8 +821,7 @@ header {
   border: none;
   outline: 0;
   background: none;
-  color: #539DA6;
-  opacity: 30%;
+  color: rgba(83, 157, 166, 0.3);
 }
 
 .carousel-screen .slick-dots li button::before {
@@ -835,7 +834,7 @@ header {
 }
 
 .carousel-screen .slick-dots li.slick-active button {
-  opacity: 100%;
+  color: #539da6;
 }
 
 .carousel-screen .slick-dots li button:active,
