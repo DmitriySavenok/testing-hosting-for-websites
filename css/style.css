@@ -818,10 +818,9 @@ header {
   height: 20px;
   padding: 5px;
   cursor: pointer;
-  color: #539DA6;
   border: none;
   outline: 0;
-  background: transparent;
+  background: none;
   opacity: 30%;
 }
 
