@@ -783,6 +783,7 @@ header {
 .carousel-screen .slick-dots {
   position: relative;
   top: -50px;
+  padding-left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -894,7 +895,7 @@ header {
 
 .sms-slide {
   background-position: 90% 50%;
-  background-size: 300px;
+  background-size: 270px;
   background-repeat: no-repeat;
 }
 
@@ -948,6 +949,12 @@ header {
 }
 
 /* Adaptation */
+
+/* Smartphones */
+
+/* Table 481-768 */
+
+/* Table 768-1238 */
 
 .slogan {
   color: #656565;
@@ -1135,6 +1142,106 @@ ol {
   }
 }
 
+@media (max-width: 480px) {
+  .carousel-screen .slick-dots {
+    padding-right: 25px;
+  }
+
+  .carousel-screen h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.3em;
+  }
+
+  .carousel-screen p {
+    font-size: 1em;
+  }
+
+  .no-webp .sms-slide{
+    background-image: url(../img/sms-operators-background.png); }
+
+  .sms-slide {
+    background-position: 50% 60%;
+    background-size: contain;
+  }
+
+  .volunteer-slide {
+    background-image: none !important;
+  }
+
+  .volunteer-slide h2 {
+    width: 320px;
+  }
+
+  .volunteer-slide p {
+    width: 320px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .sms-slide {
+    background-position: 90% 60%;
+    background-size: 170px;
+  }
+
+  .carousel-screen h2 {
+    font-size: 2em;
+  }
+
+  .no-webp .volunteer-slide{
+    background-image: url(../img/volunteer-slide-background.png); }
+
+  .volunteer-slide {
+    background-position: 98% 1.5em;
+    background-size: 225px;
+    background-repeat: no-repeat;
+  }
+
+  .volunteer-slide h2 {
+    width: 330px;
+  }
+
+  .volunteer-slide p {
+    width: 350px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1238px) {
+  .sms-slide {
+    background-position: 90% 70%;
+    background-size: 200px;
+  }
+
+  .qr-slide__content {
+    grid-template-columns: 70% 30%;
+  }
+
+  .qr-code img {
+    height: 170px;
+  }
+
+  .qr-code-info ol {
+    margin-top: 0;
+  }
+
+  .volunteer-slide h2 {
+    width: 530px;
+  }
+
+  .volunteer-slide p {
+    width: 380px;
+  }
+}
+
 .webp .sms-slide{ background-image: url(../img/sms-slide-background.webp); }
 
 .webp .volunteer-slide{ background-image: url(../img/volunteer-slide-background.webp); }
+
+@media (max-width: 480px){
+
+  .webp .sms-slide{ background-image: url(../img/sms-operators-background.webp); }
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+
+  .webp .volunteer-slide{ background-image: url(../img/volunteer-slide-background.webp); }
+}
