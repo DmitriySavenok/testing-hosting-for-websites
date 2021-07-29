@@ -1317,7 +1317,11 @@ ol {
   }
 
   .how-we-help__item {
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 25% 75%;
+  }
+
+  .background-number span {
+    font-size: 4em;
   }
 }
 
