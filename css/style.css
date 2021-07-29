@@ -821,6 +821,7 @@ header {
   border: none;
   outline: none;
   background: none;
+  -webkit-tap-highlight-color: transparent;
   color: rgba(83, 157, 166, 0.3);
 }
 
@@ -831,7 +832,6 @@ header {
   height: 20px;
   content: "—";
   text-align: center;
-  outline: none;
 }
 
 .carousel-screen .slick-dots li.slick-active button {
