@@ -684,15 +684,12 @@ header {
 
 .dropbtn {
   padding: 12px;
-  height: 45px;
-  width: 45px;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 .dropdown {
-  position: relative;
   display: inline-block;
 }
 
