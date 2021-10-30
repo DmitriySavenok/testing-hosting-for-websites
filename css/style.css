@@ -3889,7 +3889,6 @@ header {
 
 .ward-item {
   padding: 1em;
-  height: 440px;
   width: 280px !important;
   background-color: white;
   -webkit-filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.12));
@@ -3897,13 +3896,12 @@ header {
 }
 
 .no-webp .ward-item__avatar{
-  background: url(../img/ward-avatar/test_photo1.png); }
+  background-image: url(../img/ward-avatar/ivan.jpg); }
 
 .ward-item__avatar {
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 200px;
+  background-position: cover;
+  max-width: 280px;
+  height: 180px;
 }
 
 .ward-item__title h3 {
@@ -3943,9 +3941,9 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3978,14 +3976,10 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 480px;
+  height: 500px;
 }
 
 /* Слайд */
-
-.they-need-your-help__slider .slick-slide {
-  text-align: center;
-}
 
 /* Слайд активный (показывается) */
 
@@ -4368,6 +4362,7 @@ form {
 }
 
 .ward-card__grid {
+  padding-bottom: 2em;
   display: grid;
   grid-template-columns: 48% 48%;
   gap: 1em;
@@ -4376,6 +4371,78 @@ form {
 .ward-card__info span {
   color: #539DA6;
 }
+
+.ward-card__info .description {
+  margin: 2em 0;
+}
+
+.ward-card .progress-bar-fill {
+  height: 2em;
+}
+
+/* Gallery style */
+
+#mainCarousel {
+  width: auto;
+  max-height: 500px;
+  margin: 0 auto 1rem auto;
+  text-align: center;
+  --carousel-button-color: #170724;
+  --carousel-button-bg: #fff;
+  --carousel-button-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%),
+      0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+  --carousel-button-svg-width: 20px;
+  --carousel-button-svg-height: 20px;
+  --carousel-button-svg-stroke-width: 2.5;
+}
+
+#mainCarousel img {
+  height: 500px;
+  width: auto;
+}
+
+#mainCarousel .carousel__slide {
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+#mainCarousel .carousel__button.is-prev {
+  left: -1.5rem;
+}
+
+#mainCarousel .carousel__button.is-next {
+  right: -1.5rem;
+}
+
+#mainCarousel .carousel__button:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 4px #539DA6;
+          box-shadow: 0 0 0 4px #539DA6;
+}
+
+#thumbCarousel .carousel__slide {
+  opacity: 0.5;
+  padding: 0;
+  margin: 0.25rem;
+  width: 96px;
+  height: 64px;
+  overflow: hidden;
+}
+
+#thumbCarousel .carousel__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+}
+
+#thumbCarousel .carousel__slide.is-nav-selected {
+  opacity: 1;
+}
+
+/* Adaptation */
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -4756,6 +4823,12 @@ ul.breadcrumb li a:hover {
   }
 }
 
+@media (max-width: 960px) {
+  .ward-card__grid {
+    display: inherit;
+  }
+}
+
 @media (max-width: 932px) {
   .contact-us__grid {
     display: inherit;
@@ -4928,6 +5001,11 @@ ul.breadcrumb li a:hover {
     display: inline-block;
   }
 
+  .ward-card__gallery-img img {
+    width: 100%;
+    height: auto;
+  }
+
   .button-to-top {
     bottom: 1em;
     /* отступ кнопки от нижнего края страницы*/
@@ -5032,7 +5110,7 @@ ul.breadcrumb li a:hover {
 
 .webp .volunteer-slide{ background-image: url(../img/volunteer-slide-background.webp); }
 
-.webp .ward-item__avatar{ background: url(../img/ward-avatar/test_photo1.webp); }
+.webp .ward-item__avatar{ background-image: url(../img/ward-avatar/ivan.webp); }
 
 .webp #img1{ background-image: url(../img/news-img/news-card2.webp); }
 
