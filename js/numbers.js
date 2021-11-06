@@ -9,7 +9,7 @@ function countup(className){
                     
             $('.'+className).spincrement({
                 from: 1,
-                duration: 5200,
+                duration: 7000,
             });
         }
     })	
