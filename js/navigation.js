@@ -6,26 +6,16 @@ function navigationToggle() {
     logo.classList.toggle("logo-fixed")
 }
 
-document.querySelectorAll('a[href^="#"').forEach(link => {
+$(document).ready(function() {
+  jQuery(".scrollto").click(function () {
+  elementClick = jQuery(this).attr("href")
 
-  link.addEventListener('click', function(e) {
-      e.preventDefault();
+  $('#navigation').removeClass('navigation__opened')
+  $('#logo').removeClass('logo-fixed')
 
-      let href = this.getAttribute('href').substring(1);
 
-      const scrollTarget = document.getElementById(href);
-
-      const topOffset = document.querySelector('.scrollto').offsetHeight;
-      // const topOffset = 0; // если не нужен отступ сверху
-      const elementPosition = scrollTarget.getBoundingClientRect().top;
-      const offsetPosition = elementPosition - topOffset;
-
-      navigation.classList.remove("navigation__opened");
-      logo.classList.remove("logo-fixed")
-
-      window.scrollBy({
-          top: offsetPosition,
-          behavior: 'smooth'
-      });
+  destination = jQuery(elementClick).offset().top - 70;
+  jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 1000);
+  return false;
   });
 });
