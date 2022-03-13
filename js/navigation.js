@@ -1,33 +1,9 @@
 var logo = document.getElementById("logo");
-  var navigation = document.getElementById("navigation");
-  var buttonOpen = document.getElementById("navigation-button-open");
-  var buttonClose = document.getElementById("navigation-button-close");
-  var navigatioList = document.querySelector(".navigation__list");
-  var navigatioBlock = document.querySelector(".navigation__block");
-
+var navigation = document.getElementById("navigation");
 
 function navigationToggle() {
-  var navigationIsClose = navigation.classList.contains("navigation-closed");
-
-  if (navigationIsClose == true) {
-    navigation.classList.remove("navigation-closed")
-    navigation.classList.add("navigation__opened")
-    buttonOpen.classList.add("visually-hidden")
-    buttonClose.classList.remove("visually-hidden")
-    navigatioList.classList.remove("visually-hidden")
-    navigatioBlock.classList.remove("visually-hidden")
-    logo.classList.add("logo-fixed")
-  }
-
-  if (navigationIsClose == false) {
-    navigation.classList.add("navigation-closed")
-    navigation.classList.remove("navigation__opened")
-    buttonOpen.classList.remove("visually-hidden")
-    buttonClose.classList.add("visually-hidden")
-    navigatioList.classList.add("visually-hidden")
-    navigatioBlock.classList.add("visually-hidden")
-    logo.classList.remove("logo-fixed")
-  }
+    navigation.classList.toggle("navigation__opened");
+    logo.classList.toggle("logo-fixed")
 }
 
 document.querySelectorAll('a[href^="#"').forEach(link => {
@@ -44,11 +20,7 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
       const elementPosition = scrollTarget.getBoundingClientRect().top;
       const offsetPosition = elementPosition - topOffset;
 
-      navigation.classList.add("navigation-closed")
-      navigation.classList.remove("navigation__opened")
-      buttonOpen.classList.remove("visually-hidden")
-      buttonClose.classList.add("visually-hidden")
-      navigatioList.classList.add("visually-hidden")
+      navigation.classList.remove("navigation__opened");
       logo.classList.remove("logo-fixed")
 
       window.scrollBy({
