@@ -34,9 +34,17 @@ let isScroll2 = 0, // доп. проверка
 $(window).on('scroll', function(){
     if(isScroll2 === 0 && $(this).scrollTop() >= targetScroll2) {
       isScroll2 = 1;
-      $('.photo-main').addClass('photo-translate');
+      $('.photo-main').animate({
+        left: '-=120',
+      }, 500, function() {
+        // Закончили анимацию.
+      });
     } else if(isScroll2 === 1 && $(this).scrollTop() < targetScroll2) {
       isScroll2 = 0;
-      $('.photo-main').removeClass('photo-translate')
+      $('.photo-main').animate({
+        left: '+=120',
+      }, 500, function() {
+        // Закончили анимацию.
+      });
     }
 });
