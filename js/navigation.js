@@ -2,9 +2,11 @@
 var logo = document.getElementById("logo");
 var navigation = document.getElementById("navigation");
 var body = document.querySelector("body");
+var photo = document.querySelector(".photo-main");
 
 function navigationToggle() {
     navigation.classList.toggle("navigation__opened");
+    photo.classList.toggle("stop-photo-scroll");
     logo.classList.toggle("logo-fixed")
     body.classList.toggle("stop-scroll")
 }
@@ -105,6 +107,7 @@ $(document).ready(function() {
   $('#navigation').removeClass('navigation__opened')
   $('#logo').removeClass('logo-fixed')
   $('#body').removeClass('stop-scroll')
+  $(".photo-main").removeClass('stop-photo-scroll')
   if($(".navigation__block").hasClass("navigation-to-bottom"));{
     $('.navigation__block').removeClass('navigation-to-bottom');
   }
