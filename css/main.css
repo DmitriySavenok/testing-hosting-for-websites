@@ -875,7 +875,10 @@ iframe {
             box-sizing: border-box;
     white-space: nowrap;
     color: #fff;
-    background-color: #2d2d2d; }
+    background-color: #2d2d2d;
+    -webkit-transition: all ease 0.4s;
+    -o-transition: all ease 0.4s;
+    transition: all ease 0.4s; }
   .header__social-icon {
     fill: #fff; }
 
