@@ -1,0 +1,6 @@
+@font-face {
+  font-family: Raleway;
+  src: url("../fonts/Raleway-VariableFont_wght.woff2"), url("../fonts/Raleway-VariableFont_wght.ttf");
+  font-display: swap;
+}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9mb250cy9SYWxld2F5LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0EiLCJmaWxlIjoic3JjL2ZvbnRzL1JhbGV3YXkuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGZvbnQtZmFjZSB7XG4gIGZvbnQtZmFtaWx5OiBSYWxld2F5O1xuICBzcmM6IHVybChcIi4uL2ZvbnRzL1JhbGV3YXktVmFyaWFibGVGb250X3dnaHQud29mZjJcIiksIHVybChcIi4uL2ZvbnRzL1JhbGV3YXktVmFyaWFibGVGb250X3dnaHQudHRmXCIpO1xuICBmb250LWRpc3BsYXk6IHN3YXA7XG59XG4iXX0= */
