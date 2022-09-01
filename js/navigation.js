@@ -5,7 +5,7 @@ function navigationToggle() {
 	menuButton.addEventListener('click', function() {
 		menuButton.classList.toggle('button__pressed');
 		navigation.classList.toggle('navigation--opened');
-    body.classList.toggle('noscroll');
+    // body.classList.toggle('noscroll');
 		console.log('click');
 
     if (navigation.classList.contains('navigation--opened') == true) {
@@ -14,7 +14,7 @@ function navigationToggle() {
         if ( ! withinBoundaries ) {
           menuButton.classList.remove('button__pressed');
           navigation.classList.remove('navigation--opened');
-          body.classList.remove('noscroll');
+          // body.classList.remove('noscroll');
         }
       })
     }
