@@ -28,20 +28,22 @@ document.querySelectorAll('a[href^="#"').forEach(link => {
   link.addEventListener('click', function(e) {
       e.preventDefault();
 
+      menuButton.classList.remove('button__pressed');
+      navigation.classList.remove('navigation--opened');
+
       let href = this.getAttribute('href').substring(1);
 
       const scrollTarget = document.getElementById(href);
 
-      const topOffset = 80;
+      const topOffset = 64;
 
       const elementPosition = scrollTarget.getBoundingClientRect().top;
+      // const offsetPosition = elementPosition - topOffset;
       const offsetPosition = elementPosition - topOffset;
 
       window.scrollBy({
           top: offsetPosition,
           behavior: 'smooth'
       });
-
-      navigationClose();
   });
 });
