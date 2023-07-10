@@ -31,18 +31,19 @@ body {
 }
 
 .container {
+  padding: 20px;
   max-width: 800px;
   margin: 0 auto;
 }
 
 .tabs-background {
   padding-top: 0;
+  user-select: none;
 }
 
 .tab-buttons {
   display: flex;
   justify-content: space-between;
-  /* gap: 30px; */
 }
 
 .tab-activation-button {
@@ -52,6 +53,10 @@ body {
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
+}
+
+.active-tab {
+  color: var(--light-text-color);
 }
 
 .pomodoro-button.active-tab {
@@ -88,6 +93,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .timer-control-button {
@@ -164,4 +170,11 @@ body {
 .short-break-tab-background .pomodoro-tab,
 .short-break-tab-background .long-break-tab {
   display: none;
+}
+
+@media (max-width: 450px) {
+  .timer-buttons {
+    justify-content: space-between;
+    gap: 0;
+  }
 }

@@ -12,13 +12,13 @@ let pomodoroTabButton = document.getElementById('pomodoro');
 let shortTabButton = document.getElementById('short-break');
 let longTabButton = document.getElementById('long-break');
 
-let minutesDefault = 25; // после тестирования установить 25
+let minutesDefault = 25;
 
-let pomodoroMinutes = 25; // после тестирования установить 25
-let shortBreakMinutes = 5; // после тестирования установить 5
+let pomodoroMinutes = 25;
+let shortBreakMinutes = 5;
 let longBreakMinutes = 15;
 
-let necessaryCycles = 4; // после тестирования установить 4
+let necessaryCycles = 4;
 
 let seconds = 0;
 let minutes = 0;
@@ -33,17 +33,13 @@ pauseBtn.disabled = true;
 resetBtn.disabled = true;
 nextBtn.disabled = true;
 
-// Необходимо дописать логику перехода на короткий перерыв, и логику учитывающую завершение цикла и переход на долгий перерыв
 // Правки
 
 // Сгрупировать отслеживание нажатий на кнопки в одну функицю.
 // Не прописывать нажатие кнопки старт для каждой вкладки, а просто блокировать вкладки
 // Добавить фавиконку и подпись к таймеру в заголовке.
-// Сделать автоматическое включением таймера отдыха после завершения работы.
-// добавить иконку для кнопок.
-// сделать, чтою после нажатия на кнопку старт, она становилась кнопкой пауза
 // Добавить звуковое оповещение
-// установить исходные значения для минут
+
 function updateCountSpan() {
   pomodoroCountSpan.textContent = pomodoroCount + ' / ' + necessaryCycles;
 }
@@ -193,6 +189,7 @@ pauseBtn.addEventListener('click', () => {
   clearInterval(interval);
   startBtn.disabled = false;
   pauseBtn.disabled = true;
+  document.title = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} на паузе`;
 });
 
 resetBtn.addEventListener('click', () => {
@@ -225,7 +222,7 @@ stopBtn.addEventListener('click', () => {
     updateCountSpan();
     tabsEnable();
     pomodoroTabButton.click();
-    document.title = 'Метод помидора'
+    document.title = 'Pomodoro'
   }
 });
 
@@ -262,10 +259,10 @@ function pomodoroTabsActive() {
   background.classList.add('pomodoro-background');
   background.classList.remove('short-break-tab-background');
   background.classList.remove('long-break-tab-background');
+  document.title = 'Работа'
 }
 
 function shortTabsActive() {
-  console.log("выбрана вкладка короткого перерыва");
   seconds = 0;
   minutes = shortBreakMinutes;
   timer.textContent = `${minutes.toString()}:00`;
@@ -273,10 +270,10 @@ function shortTabsActive() {
   background.classList.remove('pomodoro-background');
   background.classList.add('short-break-tab-background');
   background.classList.remove('long-break-tab-background');
+  document.title = 'Короткий перерыв'
 }
 
 function longTabsActive() {
-  console.log("выбрана вкладка долгого перерыва");
   seconds = 0;
   minutes = longBreakMinutes;
   timer.textContent = `${minutes.toString()}:00`;
@@ -284,6 +281,7 @@ function longTabsActive() {
   background.classList.remove('pomodoro-background');
   background.classList.remove('short-break-tab-background');
   background.classList.add('long-break-tab-background');
+  document.title = 'Отдых'
 }
 
 trackingButtonClicks();
