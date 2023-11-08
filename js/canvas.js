@@ -10,7 +10,7 @@ const text = document.getElementById('text_input');
 document.getElementById('photo_input').value = '';
 
 let title = 'Введите текст';
-let title_bgr = ['./src/text_background.jpg', 500, 115];
+let title_bgr = ['https://dmitriysavenok.github.io/src/text_background.jpg', 500, 115];
 let font_size = 32;
 const font_color = '#E8E8D9';
 
