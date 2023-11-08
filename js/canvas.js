@@ -17,7 +17,7 @@ const font_color = '#E8E8D9';
 input.value = font_size;
 text.value = '';
 
-let photo = ['./src/photo_empty_bg.jpg'];
+let photo = ['https://dmitriysavenok.github.io/src/photo_empty_bg.jpg'];
 
 function drawCanvas() {
 
