@@ -321,16 +321,31 @@ function featuredShowsSlider() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var simplebar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! simplebar */ "./node_modules/simplebar/dist/index.mjs");
+
+function headerToggleMenu() {}
+function headerSearchInput() {
+  var searchBtn = document.querySelector('.header__search-btn');
+  var closeBtn = document.querySelector('.header__close-btn');
+  var search = document.querySelector('.search');
+  var searchInput = document.querySelector('.search__input');
+  searchBtn.addEventListener('click', function () {
+    console.log('click');
+    search.classList.add('search__input-visible');
+    searchInput.focus();
+  });
+  closeBtn.addEventListener('click', function () {
+    console.log('click');
+    search.classList.remove('search__input-visible');
+  });
+}
 function headerBackgroudScroll() {
   var header = document.querySelector('.header');
-  header.classList.remove('header--scrolling');
-  if (window.scrollY != 0) {
-    header.classList.add('header--scrolling');
-  } else {
-    header.classList.remove('header--scrolling');
-  }
-  window.addEventListener('scroll', function () {
-    if (window.scrollY >= 54) {
+  var pageContent = document.querySelector('main');
+  var simpleBar = new simplebar__WEBPACK_IMPORTED_MODULE_0__["default"](document.getElementById('site'));
+  simpleBar.getScrollElement().addEventListener('scroll', function () {
+    var rect = pageContent.getBoundingClientRect();
+    if (rect.top < -54) {
       header.classList.add('header--scrolling');
     } else {
       header.classList.remove('header--scrolling');
@@ -338,7 +353,8 @@ function headerBackgroudScroll() {
   });
 }
 /* harmony default export */ __webpack_exports__["default"] = ({
-  headerBackgroudScroll: headerBackgroudScroll
+  headerBackgroudScroll: headerBackgroudScroll,
+  headerSearchInput: headerSearchInput
 });
 
 /***/ }),
@@ -641,6 +657,7 @@ Object(_vendor_vh_fix__WEBPACK_IMPORTED_MODULE_4__["vhFix"])();
 Object(_modules_actualYear__WEBPACK_IMPORTED_MODULE_5__["actualYear"])();
 _modules_scrollToAnchor__WEBPACK_IMPORTED_MODULE_12__["default"].init();
 _components_header__WEBPACK_IMPORTED_MODULE_6__["default"].headerBackgroudScroll();
+_components_header__WEBPACK_IMPORTED_MODULE_6__["default"].headerSearchInput();
 _components_UI_audioPlayer__WEBPACK_IMPORTED_MODULE_7__["default"].audioPlayer();
 _components_categoriesSlider__WEBPACK_IMPORTED_MODULE_8__["default"].categoriesSlider();
 _components_featuredShowsSlider__WEBPACK_IMPORTED_MODULE_9__["default"].featuredShowsSlider();
@@ -778,14 +795,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var object_fit_images__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! object-fit-images */ "./node_modules/object-fit-images/dist/ofi.common-js.js");
 /* harmony import */ var object_fit_images__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(object_fit_images__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var simplebar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! simplebar */ "./node_modules/simplebar/dist/index.mjs");
 
 
 
 
 
 // import objectFitVideos from 'object-fit-videos';
-
 
 svg4everybody__WEBPACK_IMPORTED_MODULE_2___default()();
 object_fit_images__WEBPACK_IMPORTED_MODULE_4___default()();
